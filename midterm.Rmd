@@ -1,0 +1,84 @@
+---
+title: 'EKT-816: Midterm'
+author:
+date: 
+output: pdf_document
+bibliography: ../../../../../library.bib
+biblio-style: authordate1
+geometry: margin=1in
+---
+_There are 100 points available on this problem set, and it will be graded out of 80. That is, there are 20 bonus points available._
+
+**Due Date: Wednesday, April 3rd at 3.00 PM.**
+
+1. Consider the joint distribution
+\begin{eqnarray}
+f_{XY}(x,y) & = & k\cdot x^{y}
+\end{eqnarray}
+over the domain $0 < x < 1$, $0 < y < 1$, for some $k > 0$.
+
+(a) What value should $k$ have for $f$ to be a proper density?
+
+(b) Find the marginal densities of $X$ and $Y$. 
+
+**Hint: $x^y = \exp[y\cdot \log(x)]$.**
+
+(c) Find the mean of $Y$.
+
+(d) Find the conditional mean of $Y$, given $X$.
+
+\hfill [$4 \times 5 =  20$ points]
+
+2. We will consider some simple aspects of the demand for education in this question, namely that education has financial payoffs but can be unpleasant to acquire. So, think of a population of students who differ along two dimensions: ability $A$, and their subjective disutility for studying (say, $V$). Measure these variables in logarithmic units (i.e. a student of ability $a > 0$ is approximately $a$\% better than average, and similarly for the preference parameter $v$).
+
+ If a student of ability $a$ completes a university degree, she earns a salary of $w_1e^a$, where $w_1 > 0$ is the wage in the white-collar labor market. Suppose also that disutility of studying acts in such a way as to decrease the value of consumption by a factor of $e^{-v}$, which is smaller than one for $v > 0$. Of course, some people may enjoy studying, if $v < 0$. 
+
+On the other hand, if a student does not go to university, they earn a salary of $w_0$, which is the wage in the blue-collar sector (and which is the same for everyone).  Assume the joint distribution of $(A, V)$ is bivariate normal, with mean zero. Use the notation $\sigma_{AV}$ for the covariance between $A$ and $V$, $\sigma^2_A$ for the variance of $A$, and similarly $\sigma^2_V$ for the variance of $V$.
+
+(a) What is a reasonable decision rule for a (prospective) student facing this choice? You may assume she knows her own ability and preferences. Let $D = 1$ if a given student decides to go, and $D = 0$ if not.
+
+**Hint: you may want to define $\Delta = a - v$, and consider its distribution.** 
+
+(b) Given the decision rule you wrote down in (a) above, what fraction of the population will choose to go to university?
+
+(c) What is the joint distribution of $(A, \Delta)$?
+
+(d) Express $a$ as a linear function of $\Delta$ and an independent noise term $U$. What is the distribution of $U$?
+
+**Hint: look up the properties of the bivariate normal distribution, or use the hint from Problem Set 1, question 3.**
+
+(e) Let $Y_1(A, V)$ be the potential (log) earnings of a graduate with ability $A$ and preferences $V$, and similarly for $Y_0$. If you wanted to determine the causal effect of university education on earnings, would a comparison of the average earnings of graduates with non-graduates deliver a consistent estimate of either the ATE or the ATT? If not, would this naive comparison be biased upwards or downwards?
+
+**Hint: Do graduates have higher ability, on average, than non-graduates?**
+
+**Another hint: look up the properties of the truncated normal distribution.**
+
+(f) Now, consider a "merit scholarship" (or, equivalently, a wage subsidy), that depends on students' academic ability as follows: a student of ability $a$ will have her wage augmented by a factor of $e^{ka}$ for some $k > 0$ if she graduates, but if she does not, she still receives the blue-collar wage $w_0$.  
+
+Let $Z$ be an indicator for the receipt of the scholarship, and define $D_1(A, V)$ to be an indicator for whether a student with ability $A$ and preferences $V$ would graduate when subject to the scholarship. Similarly, let $D_0(A,V)$ be the outcome without the scholarship. Describe the joint distribution of $(D_1, D_0)$.
+
+**Hint: you may find it helpful to draw a picture of the $(A, V)$ plane and illustrate the different subsets of the population on it. Who would graduate whether the scholarship was given or not? Who would never graduate? There are four possibilities in total.**
+
+(g) If the scholarship was given to all students leaving high school (or to a random subset of them), how would this policy affect the number of graduates?
+
+\hfill [$7 \times 5 = 35$ points]
+
+3. Let $X_1, X_2, \ldots X_n$ be a mutually independent sequence of exponentially distributed random variables, with $\lambda = 1$. Let $\overline{X}_n = n^{-1}\sum^n_{i=1}X_i$ be the sample mean.
+
+(a) What is $\text{plim}_{n\rightarrow\infty} \overline{X}_n$?
+
+(b) Use the delta method to find the asymptotic distribution of $Y_n = 1/\overline{X}_n$.
+
+\hfill [$5 + 10 = 15$ points]
+
+4. Read @Neal1996 and answer the following questions:
+
+(a) What type of data (cross-sectional, longitudinal, synthetic panel, etc) do they use to establish their "basic result"?
+
+(b) Explain their omitted variables argument. What evidence is there in their Table 1 that AFQT is an omitted variable in the basic wage regressions?
+
+(c) Why do the authors _not_ control for e.g. post-secondary schooling? Is this an instance of the "bad control" problem (see Ch. 3.2.3 of @Angrist2008)? Which assumptions would justify including these controls, and which would not?
+
+\hfill [$3 \times 10 = 30$ points]
+
+# References
